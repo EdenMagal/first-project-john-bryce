@@ -1,0 +1,119 @@
+#boardHeadline {
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-top: 20px;
+}
+
+body {
+    background-image: url(tile.jpg);
+}
+
+.padding-top {
+    padding-top: 10px;
+}
+
+.padding-bottom {
+    padding-bottom: 10px;
+}
+
+.inside-padding {
+    padding: 3px 0;
+}
+
+input {
+    text-align: center;
+}
+
+.imageBcg {
+    background-image: url(formbg.jpg);
+    width: 50%;
+    margin: 0 25%;
+    background-repeat: repeat;
+}
+
+.center {
+    justify-content: center;
+}
+
+.borderDesign {
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+div {
+    display: flex;
+}
+
+@keyframes fadeAndScale {
+    0% {
+        opacity: 0;
+        transform: scale3d(.75, .75, 1);
+    }
+    70% {
+        opacity: 0;
+        transform: scale3d(.75, .75, 1);
+    }
+    100% {
+        opacity: 1;
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+.remove-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 20px;
+    width: 20px;
+    visibility: hidden;
+    background-color: transparent;
+    border: transparent;
+}
+
+.noteDiv:hover .remove-button {
+    visibility: visible;
+}
+
+.noteDiv {
+    background-image: url(newnote.png);
+    height: 250px;
+    width: 250px;
+    margin: 10px;
+    background-size: cover;
+    animation: fadeAndScale 1s cubic-bezier(.39, 1.05, .58, 1.95);
+    animation-delay: -0.2s;
+    transform-origin: center bottom;
+    position: relative;
+    overflow-y: scroll;
+}
+
+#notesDiv {
+    flex-wrap: wrap;
+}
+
+.taskDiv {
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.deadlineDiv {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .imageBcg {
+        width: 100%;
+        margin: 0;
+    }
+    .noteDiv {
+        width: 120px;
+        height: 120px;
+        flex-grow: 1;
+    }
+    .noteDiv:hover .remove-button {
+        visibility: visible;
+    }
+}

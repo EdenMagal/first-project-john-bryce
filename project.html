@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="project.css">
+</head>
+
+<body>
+    <h1 id="boardHeadline">My Task Board</h1>
+    <div class="center imageBcg padding-top">
+        <form id="myForm" onsubmit="saveTask(); return false">
+            <div class="center inside-padding">
+                <label>To Do:</label>
+                <input type="text" placeholder="Task info" class="borderDesign" id="ToDo" required>
+            </div>
+            <div class="center inside-padding">
+                <label>Task deadline :</label>
+                <input type="date" class="borderDesign" id="date" required>
+            </div>
+            <div class="center inside-padding">
+                <label>Time of deadline :</label>
+                <input type="time" class="borderDesign" id="time" required>
+            </div>
+            <div class="center padding-bottom inside-padding">
+                <button type="submit" class="borderDesign">Save Task</button>
+                <input type="reset" value="Reset Form" class="borderDesign">
+            </div>
+        </form>
+
+    </div>
+
+    <div id="notesDiv"></div>
+    <script src="project.js"></script>
+</body>
+
+</html>
